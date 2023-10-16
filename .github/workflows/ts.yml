@@ -1,0 +1,27 @@
+name: TS
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install dependencies
+      working-directory: ./ts
+      run: npm install
+    - name: Build TypeScript sources
+      working-directory: ./ts
+      run: npm run build
+    - name: Parsing molecule files
+      working-directory: ./ts
+      run: node --enable-source-maps lib/index.js
