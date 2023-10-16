@@ -1,0 +1,25 @@
+{
+  "name": "ckb-typed-message-signing",
+  "version": "0.1.0",
+  "description": "CKB typed message signing",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "fmt": "npx prettier -w src/**/*.ts"
+  },
+  "author": "Xuejie Xiao",
+  "license": "MIT",
+  "dependencies": {
+    "@ckb-lumos/codec": "^0.20.0",
+    "@types/lodash": "^4.14.199",
+    "eip-712": "^1.0.0",
+    "jsbi": "^4.3.0",
+    "lodash": "^4.17.21",
+    "lumos-experimental-molecule": "^0.21.0-next.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.2",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  }
+}
